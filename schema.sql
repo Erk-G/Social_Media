@@ -20,13 +20,12 @@ CREATE TABLE users (
         REFERENCES messages,
     email TEXT UNiQUE NOT NULL
         CHECK (position('@' IN email) > 1),
-    is_admin BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE messages (
     id SERIAL PRIMARY KEY,
     text TEXT NOT NULL,
-    timestamp TEXT NOT NULL DEFAULT TIMESTAMP,
+    timestamp TEXT DEFAULT TIMESTAMP,
     user_id INTEGER
         REFERENCES users ON DELETE CASCADE
 );
