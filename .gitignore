@@ -36,3 +36,4 @@ yarn-error.log*
 next-env.d.ts
 page_copy.js
 social_media.sql
+/db/config.js

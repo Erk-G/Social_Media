@@ -22,9 +22,9 @@ VALUES(     'ben@dosomething.org',
 INSERT INTO messages (text, user_id)
 VALUES(
     'SOMEONE HELP ME FIX MY ISSUE!',
-    0
+    1
 );
 
 INSERT INTO follows(user_being_followed_id,user_following_id)
-VALUES(0,
-        1);
+VALUES(1,
+        2);
