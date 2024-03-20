@@ -42,3 +42,10 @@ First time working in Next.js. I worked on a python twitter clone during a bootc
 ## First time Next.js impressions
 
 Wow I did not expect dynamic routing to be this much of a hassle to figure out. Working with new tech (is that the right term for next.js?) is difficult because changes come fast. I ran into two different Next.js tutorials from the same website and from the same year on how to set up dynamic routes. After digging more from a failure to implement dynamic routing (tutorials not the most comprehensive) I found out Next.js had a big change to how routing works. The default is now you make page.js and folders with page.js for routing but it very recently used to be you had a pages folder and the js file in the folder would I guess be interpreted as a react component and folders would be routes like in the new way. Whateveer, I got it working with the app directory method.
+
+## Notes
+
+Figure I should start making weekly notes.
+
+Week of 03/17:
+Wanted to get the database done now since that was the appeal of next.js for me. When all is said and done, the integration is pretty rad with vercel and less pain than how I worked a db in react. As for my complaints the conflicting documentation between setting next.js with pages folder or app folder continues to hinder my progress especially since I'm going the app route. I have an idea but I'm not sure how I would even get elephantSQL connected on next.js, which is why I made a vercel account instead since all clear documentation and official tutorials I could find was on that. Vercel is pretty cool and since it is all in one for deployment. I am unclear on if I should makes api routes in my file or if I should just make static functions to call the database. Going to go with the second method as the api route means the end user can also use it. My minimum goal was to replace the temp database with the real one and have everything work the same and it worked so that's good. Hoping to get individual user pages working this week.
