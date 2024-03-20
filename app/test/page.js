@@ -2,6 +2,7 @@ import { sql } from "@vercel/postgres";
 
 export default async function Test({ params }) {
   const { rows } = await sql`SELECT * FROM users WHERE user_id=${params.user}`;
+  console.log("hello world");
 
   return (
     <div>
