@@ -1,7 +1,7 @@
 import User from "../../lib/data";
 import Link from 'next/link';
-export default function userDetail({ params }){
-    const user=User.get(params.userid);
+export default async function userDetail({ params }){
+    const user=await User.get(params.userid);
     console.log(params)
     return(
         <div>
