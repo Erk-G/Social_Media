@@ -1,7 +1,7 @@
-import file from "../../test_data.json";
+import User from "../lib/data";
 import Link from 'next/link';
 export default function userDetail({ params }){
-    const user=file.users[params.userid];
+    const user=User.get(params.userid);
     console.log(params)
     return(
         <div>
