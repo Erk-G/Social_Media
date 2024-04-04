@@ -1,4 +1,4 @@
-import User from "../lib/data";
+import User from "../../lib/data";
 import Link from 'next/link';
 export default function userDetail({ params }){
     const user=User.get(params.userid);
