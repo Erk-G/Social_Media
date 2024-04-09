@@ -2,11 +2,13 @@ import User from "../../lib/data";
 import Link from 'next/link';
 export default async function userDetail({ params }){
     const user=await User.get(params.userid);
-    console.log(params)
+    const messages= await User.getMessages(params.userid);
+    console.log(messages);
+    console.log(messages[0].text);
     return(
         <div>
-            <img src={user.header_image_url}/>
-            <img src={user.image_url} alt="Image for {{ user.username }}" id="profile-avatar"/>
+            <img src={user.header_image_url} className="object-contain h-48 w-96"/>
+            <img src={user.image_url} alt="Image for {{ user.username }}" id="profile-avatar" className="object-contain h-48 w-48"/>
             <div>
             <div>
                 <div>
@@ -14,9 +16,18 @@ export default async function userDetail({ params }){
                     <ul>
                     <li>
                         <p>Messages</p>
-                        <h4>
-                        <Link href="/users/{{ user.id }}">{ user.messages}</Link>
-                        </h4>
+                        <ul>
+                        {messages.map(message=>{
+                            console.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+                            console.log(message);
+                            return(
+                            <div>
+                                <p>{message.text}</p>
+                                <h1>{message.timestamp.toString()}</h1>
+                            </div>
+                            )
+                        })}
+                        </ul>
                     </li>
                     <li>
                         <p>Following</p>
@@ -25,7 +36,7 @@ export default async function userDetail({ params }){
                         </h4>
                     </li>
                     <li>
-                        <p c>Followers</p>
+                        <p>Followers</p>
                         <h4>
                         <Link href="/users/{{ user.id }}/followers">{user.followers}</Link>
                         </h4>

@@ -17,8 +17,39 @@ class User{
                                     location
                                     FROM users
                                     WHERE id=${id};`;
+        
         return userRes.rows[0];
     }
+
+    static async getMessages(id){
+        const messagesRes= await sql`SELECT id,
+                                        text,
+                                        timestamp
+                                        FROM messages
+                                        WHERE user_id=${id}
+                                        ORDER BY id DESC;`;
+        return messagesRes.rows;
+    }
+
+    // static async getFollowers(id){
+    //     const userRes= await sql`SELECT id,
+    //                                     text,
+    //                                     timestamp
+    //                                     FROM messages
+    //                                     WHERE user_id=${id}
+    //                                     ORDER BY id DESC;`;
+    //     return userRes.rows[0];
+    // }
+
+    // static async getLikes(id){
+    //     const userRes= await sql`SELECT id,
+    //                                     text,
+    //                                     timestamp
+    //                                     FROM messages
+    //                                     WHERE user_id=${id}
+    //                                     ORDER BY id DESC;`;
+    //     return userRes.rows[0];
+    // }
 }
 
 export default User;
