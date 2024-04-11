@@ -45,7 +45,5 @@ Wow I did not expect dynamic routing to be this much of a hassle to figure out. 
 
 ## Notes
 
-Figure I should start making weekly notes.
-
-Week of 03/17:
-Wanted to get the database done now since that was the appeal of next.js for me. When all is said and done, the integration is pretty rad with vercel and less pain than how I worked a db in react. As for my complaints the conflicting documentation between setting next.js with pages folder or app folder continues to hinder my progress especially since I'm going the app route. I have an idea but I'm not sure how I would even get elephantSQL connected on next.js, which is why I made a vercel account instead since all clear documentation and official tutorials I could find was on that. Vercel is pretty cool and since it is all in one for deployment. I am unclear on if I should makes api routes in my file or if I should just make static functions to call the database. Going to go with the second method as the api route means the end user can also use it. My minimum goal was to replace the temp database with the real one and have everything work the same and it worked so that's good. Hoping to get individual user pages working this week.
+Forgot to take additional notes. Will need to make a pretty major overhault of data and pivot it back into an api like  it was when I worked on it in express/react.
+So far I added back in mostly everything that database calls could handle as well as bcrypt and webtoken functions. Next step will be setting up the api. If I don't get distracted hopefully I can have the form to sign in/sign up working and posting messages shouldn't be that far behind.

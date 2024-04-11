@@ -1,3 +1,4 @@
+// Part of the old set up to the website is to go to a page showing all likes. followers, or following kinda like twitter.
 import User from "../../lib/data";
 import Link from 'next/link';
 export default async function userDetail({ params }){
@@ -18,8 +19,6 @@ export default async function userDetail({ params }){
                         <p>Messages</p>
                         <ul>
                         {messages.map(message=>{
-                            console.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
-                            console.log(message);
                             return(
                             <div>
                                 <p>{message.text}</p>
