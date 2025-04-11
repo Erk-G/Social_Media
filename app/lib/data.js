@@ -1,5 +1,5 @@
 import {sql} from '@vercel/postgres';
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { BCRYPT_WORK_FACTOR } = require("./config.js");
 
 class User{
